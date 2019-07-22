@@ -1,0 +1,28 @@
+.left-column {
+    background-color: rgb(40, 40, 40);
+}
+
+.right-column {
+    background-color: rgb(50, 50, 50);
+}
+
+
+
+// If width is less than 750px, left and right columns will stack
+@media (max-width: 750px) {
+    #wrap {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+// If width is more than 750px, the side ui will stay on the left side
+@media (min-width: 750px) {
+    app-side-ui {
+        position: fixed;
+    }
+}
+
+#wrap {
+    position: relative;
+}

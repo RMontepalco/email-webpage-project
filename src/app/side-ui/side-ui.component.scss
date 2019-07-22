@@ -1,0 +1,57 @@
+#profile-picture {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%
+}
+
+#new-message {
+    border-radius: 10px;
+    border-color: rgb(100, 100, 255);
+    width: 80%;
+    height: 45px;
+    color: white;
+    background-color: rgb(100, 100, 255);
+    font-family: 'Raleway', sans-serif;
+}
+
+.message-popup {
+    background-color: grey;
+    //position: absolute;
+    border-radius: 20px;
+}
+
+.option {
+    margin-top: 15px;
+    min-width: 90px;
+}
+
+i {
+    color: rgb(100, 100, 255);
+}
+
+.text {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+@media (max-width: 750px) {
+    #option-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .option {
+        min-width: 50px;
+        font-size: 15px;
+        padding: 0;
+    }
+}
+
+@media (min-width: 750px) {
+    #option-box {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}

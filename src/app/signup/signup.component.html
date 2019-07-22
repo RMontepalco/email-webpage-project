@@ -1,0 +1,94 @@
+<div class="login-box container">
+    <div class="row justify-content-center">
+        <label>Create an account</label>
+    </div>
+    <div id="form-box" class="row justify-content-center">
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input
+                id="firstName"
+                formControlName="firstName"
+                class="form-control" 
+                type="text" 
+                placeholder="First Name">
+                <span
+                *ngIf="!signupForm.get('firstName').valid && signupForm.get('firstName').touched"
+                class="form-text">Please enter your first name!</span>
+            </div>
+            <div class="form-group">
+                <input
+                id="lastName"
+                formControlName="lastName"
+                class="form-control" 
+                type="text" 
+                placeholder="Last Name">
+                <span
+                *ngIf="!signupForm.get('lastName').valid && signupForm.get('lastName').touched"
+                class="form-text">Please enter your last name!</span>
+            </div>
+            <div class="form-group">
+                <input
+                id="email"
+                formControlName="email"
+                class="form-control" 
+                type="text" 
+                placeholder="Email">
+                <span
+                *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched"
+                class="form-text">Please enter your email!</span>
+            </div>
+            <div class="form-group">
+                <input
+                id="password"
+                formControlName="password"
+                class="form-control" 
+                type="password" 
+                placeholder="Password">
+                <span
+                *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched"
+                class="form-text">Please enter your password!</span>
+            </div>
+            <div class="form-group">
+                <input
+                id="confirmPassword"
+                formControlName="confirmPassword"
+                class="form-control" 
+                type="password" 
+                placeholder="Confirm Password">
+                <span
+                *ngIf="!signupForm.get('confirmPassword').valid && signupForm.get('confirmPassword').touched"
+                class="form-text">Please confirm your password!</span>
+            </div>
+            <!-- <div class="form-group"> 
+                <span
+                *ngIf="!signupForm.valid && signupForm.touched"
+                class="form-text">Please enter the required data.</span>
+            </div> -->
+        </form>
+    </div>
+    <div class="row justify-content-center">
+        <a href="/home">
+            <button
+            class="btn btn-success"
+            type="submit"
+            [disabled]="!signupForm.valid">Submit</button>
+        </a>
+
+    </div>
+
+    <div class="row justify-content-center">
+        <label class="pt-2">Already have an account?</label>
+    </div>
+    <div class="row justify-content-center">
+        <a href="/login">
+            <button class="btn btn-primary">Log In</button>
+        </a>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <a href="/">
+            <button class="btn btn-danger btn-sm">Return Home</button>
+        </a>
+    </div>
+</div>
+

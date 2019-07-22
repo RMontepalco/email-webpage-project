@@ -1,0 +1,45 @@
+<!-- Profile picture, first/last name, email -->
+<div class="row container-fluid my-4">
+    <div class="px-3">
+        <img id="profile-picture" src="https://lh3.googleusercontent.com/X1FxaeNE67nebWc14yP9TJs-pNHNa4sCZftbCMQt99do-eMXkCeRV3L07H_A46l4OuLFpyAP6vie9cLknIFkAaZ03MM5nBdlyNOZEdvEKNYAnqpqYtaI3yBMOogc0SF2OV3kNsCVnhNF__F_AXa7nGV-00vgO-0GB1_Zkl6hpPwm_0SJohWGGapgwig6FlExtB_nS-RwjlBe439UPqDqeNqPOOHkHNMd8ZLlrbWuisvY71ht88SqajBOkiYaLAYbkGuNZnE0fmSB9Ff5_TFzefDQn87xBQ0F7ZPi5hvQJDIPGNGrTlAP76ZpWfSWGha0ilR3hEye4D6dwb63itJqp65aEVfv_WxIkeGo-S0B2z4sbpPRTjYA1C1kWzCUsx-ciZMR6ILCvPHZrlh3ALDFJIhfb-NzFFmtVNjE3m_yHLiS_g1N39cGX3axvxRXaoZYDMn5fj-nN4bfOPB7qh0vlTSVAiVh-R7hJPo--8k_7Eh7ehjG9wVtvncw52Ra4H1brO43TFez-5A4_futiUmKMYtQbx-w1cDHpXdgO5PWkcUeKHUDlfijy2-YoK3oIsvBPE7fO2E7XFZrm3jT_3dCa21rNJLJ9jeqsbXzSwFdoB5OyGsatgiuhfhgQme5_SHp2n_aFkVpsm0nWg7gDmxxqdYFjpXOCP8=s550-no" alt="profile picture">
+    </div>
+
+    <div class="pt-3">
+        <h6 class="text">Ross Nikolai Montepalco</h6>
+        <p class="text">montepalco.ross@gmail.com</p>
+    </div>
+</div>
+
+<!-- New message button -->
+<div class="row container-fluid my-4 justify-content-center d-flex;">
+    <button [appButtonHighlight]="higlightColor" class="btn btn-primary" id="new-message" (click)="isOn = true">new message</button>
+</div>
+
+<!-- Option box that contains the options inbox, draft, sent, spam, and trash -->
+<div id="option-box" class="row container-fluid text mb-4">
+    <div class="col option">
+        <i class="fa fa-caret-down"></i>
+        inbox
+    </div>
+    <div class="col option">
+        <i class="fa fa-caret-right"></i>   
+        draft   
+    </div>
+    <div class="col option">
+        <i class="fa fa-caret-right"></i>    
+        sent
+    </div>
+    <div class="col option">
+        <i class="fa fa-flag"></i>
+        spam
+    </div>
+    <div class="col option">
+        <i class="fa fa-times"></i>
+        trash
+    </div>
+
+    <div class="container-fluid message-popup">
+        <!-- <app-message-ui *ngIf="isOn"></app-message-ui> -->
+    </div>
+</div>
+
