@@ -14,6 +14,11 @@ import { SideUiComponent } from './side-ui/side-ui.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { ButtonHighlightDirective } from './button-highlight.directive';
 import { SearchHighlightDirective } from './search-highlight.directive';
+import { NewMessageUiComponent } from './new-message-ui/new-message-ui.component';
+
+// import { EmailService } from './services/email.service';
+import { RestService } from './services/rest.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
   {
@@ -35,13 +40,18 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import ('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: 'new-message',
+    loadChildren: () => import ('./new-message-ui/new-message-ui.module').then(m => m.NewMessageUiModule)
   }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    SplashScreenComponent,
+    SplashScreenComponent
+    //NewMessageUiComponent
     //SignupComponent
     //ButtonHighlightDirective
     //SearchHighlightDirective
@@ -55,9 +65,12 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    RestService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

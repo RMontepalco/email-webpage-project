@@ -1,0 +1,20 @@
+.container {
+    margin-top: 30px;
+}
+
+input, textarea, select {
+    &.ng-invalid {
+      &.ng-touched {
+        border: 1px solid red;
+      }
+    }
+}
+
+label {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+span {
+    font-family: 'Raleway', sans-serif;
+}

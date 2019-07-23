@@ -11,9 +11,9 @@
 </div>
 
 <!-- New message button -->
-<div class="row container-fluid my-4 justify-content-center d-flex;">
+<a class="row justify-content-center" href="/new-message">
     <button [appButtonHighlight]="higlightColor" class="btn btn-primary" id="new-message" (click)="isOn = true">new message</button>
-</div>
+</a>
 
 <!-- Option box that contains the options inbox, draft, sent, spam, and trash -->
 <div id="option-box" class="row container-fluid text mb-4">
@@ -37,9 +37,4 @@
         <i class="fa fa-times"></i>
         trash
     </div>
-
-    <div class="container-fluid message-popup">
-        <!-- <app-message-ui *ngIf="isOn"></app-message-ui> -->
-    </div>
 </div>
-

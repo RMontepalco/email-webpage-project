@@ -10,6 +10,7 @@ import { SearchBarComponent } from '../search-bar/search-bar.component';
 
 import { ButtonHighlightDirective } from '../button-highlight.directive';
 import { SearchHighlightDirective } from '../search-highlight.directive';
+import { NewMessageUiComponent } from '../new-message-ui/new-message-ui.component';
 
 const routes: Routes = [
     {
@@ -28,7 +29,8 @@ const routes: Routes = [
         SideUiComponent,
         SearchBarComponent,
         ButtonHighlightDirective,
-        SearchHighlightDirective
+        SearchHighlightDirective,
+        NewMessageUiComponent
     ],
     imports: [
         CommonModule,
